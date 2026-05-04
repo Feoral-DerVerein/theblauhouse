@@ -1,9 +1,77 @@
-// Scroll reveal animation
+// ═══════════════════════════════════════════
+// NAV — scroll state + mobile toggle
+// ═══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
-  const targets = document.querySelectorAll(
-    '.about__label, .about__heading, .about__subtext, .about__visual-side, .expect__title, .polaroid, .quote__text, .pricing__tier, .pricing__images, .contact__shell, .contact__info'
-  );
+  const nav = document.getElementById('nav');
+  const toggle = document.querySelector('.nav__toggle');
+  const menu = document.querySelector('.nav__menu');
 
+  // Add scrolled class once user moves past hero crest
+  const onScroll = () => {
+    if (window.scrollY > 60) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      nav.classList.remove('nav--scrolled');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu toggle
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  // FAQ — single-open accordion
+  // ═══════════════════════════════════════════
+  document.querySelectorAll('[data-faq]').forEach(list => {
+    const items = list.querySelectorAll('[data-faq-item]');
+    items.forEach(item => {
+      const trigger = item.querySelector('.faq__trigger');
+      if (!trigger) return;
+      trigger.addEventListener('click', () => {
+        const isOpen = item.classList.contains('is-open');
+        items.forEach(other => {
+          other.classList.remove('is-open');
+          const t = other.querySelector('.faq__trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+
+  // ═══════════════════════════════════════════
+  // MARQUEE — apply per-logo gradient vars
+  // ═══════════════════════════════════════════
+  document.querySelectorAll('.marquee__logo').forEach(el => {
+    const from = el.dataset.gradFrom;
+    const via = el.dataset.gradVia;
+    const to = el.dataset.gradTo;
+    if (from) el.style.setProperty('--grad-from', from);
+    if (via) el.style.setProperty('--grad-via', via);
+    if (to) el.style.setProperty('--grad-to', to);
+  });
+
+  // ═══════════════════════════════════════════
+  // SCROLL REVEAL
+  // ═══════════════════════════════════════════
+  const targets = document.querySelectorAll(
+    '.value__headline, .value__copy, .stats, .experience__head, .card, .manifesto__quote, .manifesto__sign, .split__media, .split__text, .pricing__head, .tier'
+  );
   targets.forEach(el => el.classList.add('fade-in'));
 
   const observer = new IntersectionObserver(
@@ -15,33 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.12 }
   );
-
   targets.forEach(el => observer.observe(el));
-
-  // Circle animation on "gathering"
-  const gatheringEl = document.querySelector('.quote__text em');
-  if (gatheringEl) {
-    const gatheringObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          gatheringEl.classList.add('animated');
-          gatheringObs.unobserve(gatheringEl);
-        }
-      });
-    }, { threshold: 0.5 });
-    gatheringObs.observe(gatheringEl);
-  }
-
-  // Mouse glow effect on pricing cards
-  document.querySelectorAll('.pricing__tier').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      card.style.setProperty('--mouse-x', x + '%');
-      card.style.setProperty('--mouse-y', y + '%');
-    });
-  });
 });

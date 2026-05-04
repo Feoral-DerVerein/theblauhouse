@@ -3,14 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Blau House — Where leaders celebrate the journey</title>
+  <title>The Blau House | Where leaders celebrate the journey</title>
   <meta name="description" content="A private, curated gathering for 40 international businesswomen. Ibiza, May 29th 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TOP NAVIGATION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/images/logo-house-tight.png" alt="The Blau House">
+      </a>
+
+      <nav class="nav__menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#expect">Experience</a>
+        <a href="#pricing">Tickets</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#pricing" class="btn btn--primary">Reserve a seat</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- HERO SECTION -->
@@ -21,146 +47,417 @@
         <source src="assets/video1.mp4" type="video/mp4">
       </video>
     </div>
+
     <div class="hero__content">
-      <div class="hero__logo">
-        <img src="assets/images/logo.png" alt="The Blau House" class="hero__logo-img">
+      <p class="hero__eyebrow">Ibiza · May 29, 2026</p>
+      <p class="hero__presents">The Blau House presents: <em>The Journey</em></p>
+      <h1 class="hero__headline">
+        Where leaders<br><em>celebrate</em> the journey.
+      </h1>
+      <div class="hero__event">
+        <p class="hero__event-line">40 women. One evening. 16 seats left.</p>
       </div>
 
-      <p class="hero__tagline">
-        <em>The Blau House: Where<br>leaders celebrate the journey.</em>
+      <div class="hero__actions">
+        <a href="https://buy.stripe.com/28E28k0k69eY5l5d8S6g803" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Secure your seat</a>
+      </div>
+
+      <div class="hero__divider"></div>
+
+      <p class="hero__sub">
+        A private dinner where business leaders, founders, and creatives connect beyond the surface.
       </p>
-
-      <div class="hero__details">
-        <span>Friday, May 29th, 2026</span>
-        <span class="dot">&middot;</span>
-        <span>19:00 - 00:00</span>
-        <span class="dot">&middot;</span>
-        <span>Hotel N&aacute;utico Ebeso, Ibiza (Spain)</span>
-      </div>
-
-      <p class="hero__description">
-        A private, curated gathering for 40 international businesswomen.<br>
+      <p class="hero__sub">
         This isn't training, it's the next level of your support network.
       </p>
+      <p class="hero__words">
+        Private. Intentional. Limited.
+      </p>
+    </div>
 
-      <div class="hero__words">
-        <span>Private.</span>
-        <span>Intentional.</span>
-        <span>Limited.</span>
-      </div>
+  </section>
 
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- VALUE PROPOSITION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="value" id="about">
+    <div class="value__inner">
+      <p class="eyebrow">About The Blau House</p>
+      <h2 class="value__headline">
+        Meaningful human connection experiences through curated events.
+      </h2>
+      <p class="value__copy">
+        We believe that real connection doesn't happen in crowded conference
+        rooms or over business cards. It happens at a table, under the
+        sunset, with the right people. The Blau house is conversation
+        &amp; connection with intention.
+      </p>
+      <p class="value__copy">
+        The Journey is the launch event, a private dinner in Ibiza for
+        women leaders, founders, investors, and creatives from across Europe.
+        Just the right room at the right time with the right people.
+      </p>
+
+      <a href="#pricing" class="link-arrow">See tickets →</a>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- ABOUT SECTION -->
+  <!-- EXPERIENCE GRID -->
   <!-- ═══════════════════════════════════════════ -->
-  <section class="about">
-    <img src="assets/images/about-section.png" alt="This is NOT a typical event. We bring together a carefully selected group of international women, founders, creatives, operators and leaders to connect beyond surface-level networking." class="about__full-img" loading="lazy">
+  <section class="experience" id="expect">
+    <div class="experience__grid">
+      <article class="card">
+        <div class="card__img">
+          <img src="assets/images/networking-hd.jpg" alt="Authentic support network" loading="lazy">
+          <div class="card__overlay">
+            <h3 class="card__title">Authentic support network</h3>
+            <p class="card__desc">Forty women, hand-picked. No name tags, no pitches, just real conversation and relationships built to last.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="assets/images/celebration-hd.jpg" alt="Celebrating milestones" loading="lazy">
+          <div class="card__overlay">
+            <h3 class="card__title">Celebrating milestones</h3>
+            <p class="card__desc">An evening to honor the journey. The wins, the pivots, the late nights, and the women who made them happen.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="assets/images/speaking-hd.jpg" alt="Strategic vulnerability" loading="lazy">
+          <div class="card__overlay">
+            <h3 class="card__title">Strategic vulnerability</h3>
+            <p class="card__desc">Guided dynamics that move past polished LinkedIn-talk. The kind of conversation that opens doors and shifts perspective.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="assets/images/dining-hd.jpg" alt="Mediterranean dinner" loading="lazy">
+          <div class="card__overlay">
+            <h3 class="card__title">Mediterranean dinner</h3>
+            <p class="card__desc">A long table, sea breeze, slow food. Two drinks, plates to share, and the kind of pause that lets ideas land.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="assets/images/ibiza-sunset.jpg" alt="Ibiza, off-script" loading="lazy">
+          <div class="card__overlay">
+            <h3 class="card__title">Ibiza, off-script</h3>
+            <p class="card__desc">A unique experience away from the noise. Sunset over the Mediterranean, in a space designed for what matters.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="assets/images/event-crowd-hd.jpg" alt="High-impact relationships" loading="lazy">
+          <div class="card__overlay">
+            <h3 class="card__title">High-impact relationships</h3>
+            <p class="card__desc">The room is the product. Founders, operators and creatives who lead, and who show up for each other long after the night ends.</p>
+          </div>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- WHAT TO EXPECT SECTION -->
+  <!-- PRICING -->
   <!-- ═══════════════════════════════════════════ -->
-  <section class="expect">
-    <img src="assets/images/expect-section.jpg" alt="What to expect: Authentic Support Network, High-Impact Relationships, Celebrating Milestones, Strategic Vulnerability, An unique Ibiza experience" class="expect__full-img" loading="lazy">
-  </section>
+  <section class="pricing" id="pricing">
+    <div class="pricing__head">
+      <p class="eyebrow">Tickets</p>
+      <h2>Reserve your seat at the table.</h2>
+      <p class="pricing__sub">Limited to 40 women. Once we're full, we're full.</p>
+    </div>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- QUOTE SECTION -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="quote">
-    <h2 class="quote__text">
-      &ldquo;A new way of <em>gathering<svg viewBox="0 0 200 80"><ellipse cx="100" cy="40" rx="92" ry="33"/><ellipse cx="100" cy="40" rx="88" ry="30" class="circle-inner"/></svg></em> is emerging.&rdquo;
-    </h2>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- PRICING SECTION -->
-  <!-- ═══════════════════════════════════════════ -->
-  <section class="pricing">
     <div class="pricing__grid">
-      <div class="pricing__left">
-        <h3 class="pricing__what">What to expect:</h3>
-        <ul class="pricing__list">
-          <li>Limited to 40 women</li>
-          <li>Business &amp; meaningful connection</li>
-          <li>Sunset, dinner &amp; conversation</li>
-          <li>Ibiza, May 29</li>
-        </ul>
+      <a href="https://buy.stripe.com/28E28k0k69eY5l5d8S6g803" target="_blank" rel="noopener noreferrer" class="tier">
+        <div class="tier__head">
+          <span class="tier__tag">Early Bird</span>
+          <span class="tier__note">First 8 tickets · welcome gift</span>
+        </div>
+        <div class="tier__body">
+          <p class="tier__includes">What's included</p>
+          <ul>
+            <li>Welcome drink</li>
+            <li>Guided networking dynamic</li>
+            <li>Mediterranean dinner</li>
+            <li>Two drinks included</li>
+          </ul>
+        </div>
+        <div class="tier__foot">
+          <span class="tier__price">80€</span>
+          <span class="tier__cta">Reserve →</span>
+        </div>
+      </a>
 
-        <div class="pricing__block">
-          <div class="pricing__tier-label">
-            <h4>EARLY BIRD</h4>
-            <span class="pricing__limited">&middot;&nbsp;&nbsp; First 8 tickets include a welcome gift</span>
+      <a href="https://buy.stripe.com/6oU28k9UGcra9Bl0m66g800" target="_blank" rel="noopener noreferrer" class="tier tier--featured">
+        <div class="tier__head">
+          <span class="tier__tag">Founding Member</span>
+          <span class="tier__note">Elevate your experience</span>
+        </div>
+        <div class="tier__body">
+          <p class="tier__includes">What's included</p>
+          <ul>
+            <li>Everything in Early Bird</li>
+            <li>Exclusive Ibiza weekend guide</li>
+            <li>Professional photoshoot</li>
+            <li>Priority seating at dinner</li>
+          </ul>
+        </div>
+        <div class="tier__foot">
+          <span class="tier__price">120€</span>
+          <span class="tier__cta">Reserve →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ALREADY CONFIRMED -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="confirmed" id="confirmed">
+    <div class="confirmed__head">
+      <p class="eyebrow">Already Confirmed</p>
+      <h2 class="confirmed__title">Some of the women joining us in Ibiza.</h2>
+    </div>
+
+    <div class="confirmed__grid">
+      <article class="testimonial">
+        <div class="testimonial__img">
+          <img src="assets/images/deborah-sass.jpg" alt="Deborah Sass" loading="lazy">
+        </div>
+        <div class="testimonial__body">
+          <p class="testimonial__quote">"Because Aida asked me to. Also, Ibiza sunset. Also, 40 incredible women. Also... why not?"</p>
+          <div class="testimonial__head">
+            <p class="testimonial__name">Deborah Sass</p>
+            <a href="https://www.linkedin.com/in/deborahsass/" target="_blank" rel="noopener noreferrer" aria-label="Deborah Sass on LinkedIn" class="testimonial__linkedin">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
           </div>
-          <a href="https://buy.stripe.com/28E28k0k69eY5l5d8S6g803" target="_blank" rel="noopener noreferrer" class="pricing__tier pricing__tier-link">
-            <div class="pricing__tier-body">
-              <p class="pricing__includes-label">What's included:</p>
-              <ul>
-                <li>&middot; Welcome drink</li>
-                <li>&middot; Guided networking dynamic</li>
-                <li>&middot; Mediterranean dinner</li>
-                <li>&middot; Two drinks included</li>
-              </ul>
-              <span class="pricing__price">80&euro;</span>
+          <p class="testimonial__role">CEO &amp; Founder of SpaceVrse, World Economic Forum</p>
+        </div>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial__img">
+          <img src="assets/images/aida-ribal-v2.jpg" alt="Aida Ribal" loading="lazy">
+        </div>
+        <div class="testimonial__body">
+          <p class="testimonial__quote">"I believe in conversations that change the way you see yourself and your path."</p>
+          <div class="testimonial__head">
+            <p class="testimonial__name">Aida Ribal</p>
+            <a href="https://www.linkedin.com/in/aida-ribal-quintana" target="_blank" rel="noopener noreferrer" aria-label="Aida Ribal on LinkedIn" class="testimonial__linkedin">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="testimonial__role">Founder &amp; CEO at efizum · 2025 IoT Solutions World Congress Excellence Award</p>
+        </div>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial__img">
+          <img src="assets/images/kritika-maheshwari.jpg" alt="Kritika Maheshwari" loading="lazy">
+        </div>
+        <div class="testimonial__body">
+          <p class="testimonial__quote">"I want to meet other aspirational women exploring connection beyond and move ahead together!"</p>
+          <div class="testimonial__head">
+            <p class="testimonial__name">Kritika Maheshwari</p>
+            <a href="https://www.linkedin.com/in/kritika28/" target="_blank" rel="noopener noreferrer" aria-label="Kritika Maheshwari on LinkedIn" class="testimonial__linkedin">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="testimonial__role">Commercial Finance &amp; FP&amp;A · ex-Booking.com</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FAQ / ACCORDION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="faq" id="faq" aria-label="Frequently asked questions">
+    <div class="faq__inner">
+      <h2 class="faq__heading">FAQ</h2>
+
+      <div class="faq__list" data-faq>
+        <div class="faq__item is-open" data-faq-item>
+          <button class="faq__trigger" type="button" aria-expanded="true">
+            <span class="faq__num">1</span>
+            <h3 class="faq__title">Can I come alone?</h3>
+          </button>
+          <div class="faq__content">
+            <div class="faq__content-inner">
+              <p>Yes. Most guests do. You'll leave with new connections.</p>
             </div>
-          </a>
+          </div>
         </div>
 
-        <div class="pricing__block">
-          <div class="pricing__tier-label">
-            <h4>FOUNDING MEMBER</h4>
-            <span class="pricing__limited">&middot; Elevate your experience</span>
-          </div>
-          <a href="https://buy.stripe.com/6oU28k9UGcra9Bl0m66g800" target="_blank" rel="noopener noreferrer" class="pricing__tier pricing__tier--founding pricing__tier-link">
-            <div class="pricing__tier-body">
-              <p class="pricing__includes-label">What's included:</p>
-              <ul>
-                <li>&middot; Everything in Early Bird</li>
-                <li>&nbsp;&nbsp;+ Exclusive Ibiza weekend guide</li>
-                <li>&nbsp;&nbsp;+ Professional photoshoot</li>
-              </ul>
-              <span class="pricing__price">120&euro;</span>
+        <div class="faq__item" data-faq-item>
+          <button class="faq__trigger" type="button" aria-expanded="false">
+            <span class="faq__num">2</span>
+            <h3 class="faq__title">Is accommodation included?</h3>
+          </button>
+          <div class="faq__content">
+            <div class="faq__content-inner">
+              <p>No, but we have a discount code for Hotel Náutico Ébeso: <strong>BLAUHOUSE</strong></p>
             </div>
-          </a>
+          </div>
         </div>
-      </div>
 
-      <div class="pricing__right">
-        <img src="assets/images/pricing-right.jpg" alt="" class="pricing__right-img" loading="lazy">
+        <div class="faq__item" data-faq-item>
+          <button class="faq__trigger" type="button" aria-expanded="false">
+            <span class="faq__num">3</span>
+            <h3 class="faq__title">What's the dress code?</h3>
+          </button>
+          <div class="faq__content">
+            <div class="faq__content-inner">
+              <p>Sunset elegant. Think Mediterranean summer: light fabrics, comfortable elegance.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq-item>
+          <button class="faq__trigger" type="button" aria-expanded="false">
+            <span class="faq__num">4</span>
+            <h3 class="faq__title">Can I get a refund?</h3>
+          </button>
+          <div class="faq__content">
+            <div class="faq__content-inner">
+              <p>Tickets are non-refundable but transferable to another woman.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq-item>
+          <button class="faq__trigger" type="button" aria-expanded="false">
+            <span class="faq__num">5</span>
+            <h3 class="faq__title">I have dietary restrictions.</h3>
+          </button>
+          <div class="faq__content">
+            <div class="faq__content-inner">
+              <p>No problem. We'll ask you when you secure your seat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-faq-item>
+          <button class="faq__trigger" type="button" aria-expanded="false">
+            <span class="faq__num">6</span>
+            <h3 class="faq__title">Will there be Wi-Fi?</h3>
+          </button>
+          <div class="faq__content">
+            <div class="faq__content-inner">
+              <p>Yes. But we secretly hope you won't use it.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- CONTACT / FOOTER SECTION -->
+  <!-- MARQUEE LOGO SCROLLER -->
   <!-- ═══════════════════════════════════════════ -->
-  <footer class="contact">
-    <img src="assets/images/footer-section.jpg" alt="Contact - hello@theblauhouse.es" class="contact__full-img" loading="lazy">
-    <div class="contact__overlay">
-      <div class="contact__email">
-        <p>Email</p>
-        <a href="mailto:hello@theblauhouse.es">hello@theblauhouse.es</a>
-      </div>
-      <div class="contact__socials">
-        <a href="https://www.instagram.com/theblauhouse.es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5"/>
-            <circle cx="12" cy="12" r="5"/>
-            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/company/theblauhouse/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
-            <rect x="2" y="9" width="4" height="12"/>
-            <circle cx="4" cy="4" r="2"/>
-          </svg>
-        </a>
+  <section class="marquee" aria-label="Our Partners">
+    <div class="marquee__head">
+      <h2 class="marquee__title">Our Partners</h2>
+    </div>
+
+    <div class="marquee__track-wrap">
+      <div class="marquee__track">
+        <div class="marquee__logo" data-grad-from="#8B0000" data-grad-via="#B22222" data-grad-to="#5A0000">
+          <img src="assets/images/partner-urv.png" alt="Universitat Rovira i Virgili" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Universitat Rovira i Virgili</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#0E9484" data-grad-via="#67C9B5" data-grad-to="#D4A537">
+          <img src="assets/images/partner-saldeibiza.png" alt="Sal de Ibiza" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Sal de Ibiza</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#000000" data-grad-via="#1F1F1F" data-grad-to="#000000">
+          <img src="assets/images/partner-kombucha.png" alt="Kombucha Republic" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Kombucha Republic</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#C8102E" data-grad-via="#E63946" data-grad-to="#8B0000">
+          <img src="assets/images/partner-lleida.png" alt="Ajuntament de Lleida" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Ajuntament de Lleida</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#0F2A47" data-grad-via="#1F4E8A" data-grad-to="#1AACE5">
+          <img src="assets/images/partner-adr.png" alt="ADR Balears" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">ADR Balears</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#1A1A1A" data-grad-via="#3F3F46" data-grad-to="#1A1A1A">
+          <img src="assets/images/partner-bghotels.png" alt="BG Hotels - Hotel Náutico Ebeso" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">BG Hotels</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#0A0A0A" data-grad-via="#2C2C2C" data-grad-to="#0A0A0A">
+          <img src="assets/images/partner-cardamom.png" alt="Cardamom - Bespoke Events Ibiza" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Cardamom</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#B47C5F" data-grad-via="#D4A582" data-grad-to="#8B5A3C">
+          <img src="assets/images/partner-melibiza.png" alt="Mel Ibiza - Cosmética Natural" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Mel Ibiza</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#E07A2A" data-grad-via="#5DA86C" data-grad-to="#1AACE5">
+          <img src="assets/images/partner-ibizafashion.png" alt="Ibiza Fashion Festival" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label">Ibiza Fashion Festival</span>
+        </div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="marquee__logo" data-grad-from="#8B0000" data-grad-via="#B22222" data-grad-to="#5A0000" aria-hidden="true">
+          <img src="assets/images/partner-urv.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Universitat Rovira i Virgili</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#0E9484" data-grad-via="#67C9B5" data-grad-to="#D4A537" aria-hidden="true">
+          <img src="assets/images/partner-saldeibiza.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Sal de Ibiza</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#000000" data-grad-via="#1F1F1F" data-grad-to="#000000" aria-hidden="true">
+          <img src="assets/images/partner-kombucha.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Kombucha Republic</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#C8102E" data-grad-via="#E63946" data-grad-to="#8B0000" aria-hidden="true">
+          <img src="assets/images/partner-lleida.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Ajuntament de Lleida</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#0F2A47" data-grad-via="#1F4E8A" data-grad-to="#1AACE5" aria-hidden="true">
+          <img src="assets/images/partner-adr.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">ADR Balears</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#1A1A1A" data-grad-via="#3F3F46" data-grad-to="#1A1A1A" aria-hidden="true">
+          <img src="assets/images/partner-bghotels.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">BG Hotels</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#0A0A0A" data-grad-via="#2C2C2C" data-grad-to="#0A0A0A" aria-hidden="true">
+          <img src="assets/images/partner-cardamom.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Cardamom</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#B47C5F" data-grad-via="#D4A582" data-grad-to="#8B5A3C" aria-hidden="true">
+          <img src="assets/images/partner-melibiza.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Mel Ibiza</span>
+        </div>
+        <div class="marquee__logo" data-grad-from="#E07A2A" data-grad-via="#5DA86C" data-grad-to="#1AACE5" aria-hidden="true">
+          <img src="assets/images/partner-ibizafashion.png" alt="" class="marquee__logo-img">
+          <span class="marquee__logo-hover-label" aria-hidden="true">Ibiza Fashion Festival</span>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
   <script src="script.js"></script>
 </body>
