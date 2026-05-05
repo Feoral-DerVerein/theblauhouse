@@ -21,13 +21,48 @@ document.addEventListener('DOMContentLoaded', () => {
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
       const open = menu.classList.toggle('is-open');
+      toggle.classList.toggle('is-active', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
     });
     menu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.remove('is-open');
+        toggle.classList.remove('is-active');
         toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       });
+    });
+    // Close menu when tapping outside
+    document.addEventListener('click', (e) => {
+      if (!menu.classList.contains('is-open')) return;
+      if (e.target.closest('.nav')) return;
+      menu.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  // EXPERIENCE CARDS — tap-to-reveal on touch devices
+  // ═══════════════════════════════════════════
+  const isTouch = window.matchMedia('(hover: none)').matches || 'ontouchstart' in window;
+  if (isTouch) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        const wasOpen = card.classList.contains('is-open');
+        cards.forEach(c => c.classList.remove('is-open'));
+        if (!wasOpen) card.classList.add('is-open');
+      });
+    });
+
+    // Close any open card when tapping outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.card')) {
+        cards.forEach(c => c.classList.remove('is-open'));
+      }
     });
   }
 
