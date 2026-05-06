@@ -1194,16 +1194,41 @@ h1, h2, h3, h4 {
   width: 100%;
   background: none;
   border: none;
-  padding: 22px 24px 22px 16px;
+  padding: 22px 56px 22px 16px;
   cursor: pointer;
   text-align: left;
   color: rgba(26, 26, 26, 0.22);
   transition: color 0.4s ease;
   font-family: inherit;
+  position: relative;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
   appearance: none;
   touch-action: manipulation;
+}
+
+.faq__trigger::before,
+.faq__trigger::after {
+  content: '';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 14px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.faq__trigger::before {
+  transform: translateY(-50%);
+}
+
+.faq__trigger::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq__item.is-open .faq__trigger::after {
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .faq__trigger:hover {

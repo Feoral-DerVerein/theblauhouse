@@ -70,22 +70,56 @@ document.addEventListener('DOMContentLoaded', () => {
   // FAQ — single-open accordion
   // ═══════════════════════════════════════════
   document.querySelectorAll('[data-faq]').forEach(list => {
-    const items = list.querySelectorAll('[data-faq-item]');
+    const items = Array.from(list.querySelectorAll('[data-faq-item]'));
+
+    const setHeight = (item, open) => {
+      const content = item.querySelector('.faq__content');
+      if (!content) return;
+      if (open) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0px';
+      }
+    };
+
+    // Set initial height for already-open items
+    items.forEach(item => {
+      if (item.classList.contains('is-open')) {
+        setHeight(item, true);
+      }
+    });
+
     items.forEach(item => {
       const trigger = item.querySelector('.faq__trigger');
       if (!trigger) return;
-      trigger.addEventListener('click', () => {
-        const isOpen = item.classList.contains('is-open');
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const wasOpen = item.classList.contains('is-open');
         items.forEach(other => {
           other.classList.remove('is-open');
+          setHeight(other, false);
           const t = other.querySelector('.faq__trigger');
           if (t) t.setAttribute('aria-expanded', 'false');
         });
-        if (!isOpen) {
+        if (!wasOpen) {
           item.classList.add('is-open');
+          setHeight(item, true);
           trigger.setAttribute('aria-expanded', 'true');
         }
       });
+    });
+
+    // Recalculate heights on resize (in case content reflows)
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        items.forEach(item => {
+          if (item.classList.contains('is-open')) {
+            setHeight(item, true);
+          }
+        });
+      }, 200);
     });
   });
 
