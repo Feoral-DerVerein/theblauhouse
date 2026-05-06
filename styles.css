@@ -1205,10 +1205,10 @@ h1, h2, h3, h4 {
   cursor: pointer;
   text-align: left;
   color: var(--ink);
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.005em;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.6vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.005em;
   transition: color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
@@ -1222,11 +1222,11 @@ h1, h2, h3, h4 {
 }
 
 .faq__title {
-  font-family: var(--sans);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.005em;
-  line-height: 1.4;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.6vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
   margin: 0;
   color: inherit;
   flex: 1;
@@ -1279,11 +1279,10 @@ h1, h2, h3, h4 {
 
   .faq__trigger {
     padding: 16px 4px;
-    font-size: 0.95rem;
   }
 
   .faq__title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .faq__content p {
