@@ -1638,22 +1638,7 @@ h1, h2, h3, h4 {
     display: none;
   }
 
-  /* FAQ — show all questions expanded on mobile */
-  .faq__content {
-    max-height: none;
-    opacity: 1;
-    overflow: visible;
-  }
-
-  .faq__trigger {
-    color: var(--ink);
-    cursor: default;
-    pointer-events: none;
-  }
-
-  .faq__item .faq__content {
-    max-height: none;
-  }
+  /* FAQ — keep accordion interactive on mobile (was breaking with pointer-events:none) */
 
   .nav__logo img {
     height: 42px;
